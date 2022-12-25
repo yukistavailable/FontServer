@@ -4,3 +4,6 @@ main/bitmaps
 *.log
 *.pyc
 __pycache__/
+server.crt
+server.key
+server.csr
