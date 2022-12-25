@@ -3,7 +3,7 @@ version: '3'
 services:
   app:
     build: .
-    entrypoint: sh -c "python3 manage.py migrate; gunicorn config.wsgi:application --bind 0.0.0.0:8000"
+    entrypoint: sh -c "python3 manage.py migrate --noinput; python manage.py collectstatic --noinput --clear; gunicorn config.wsgi:application --bind 0.0.0.0:8000"
     volumes:
       - .:/code
     ports:
@@ -16,9 +16,10 @@ services:
     #    restart: always
     image: nginx:1.15.12-alpine
     depends_on:
-      - webapp
+      - app
     ports:
       - "0.0.0.0:80:80"
+      - "0.0.0.0:443:443"
     volumes:
       - "./nginx:/etc/nginx/conf.d"
-      - "./prodo/static:/var/www/ai-keiba/static/"
+      - "./prodo/static:/var/www/font/static/"
