@@ -28,11 +28,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-RUNSERVERPLUS_SERVER_ADDRESS_PORT = '0.0.0.0:80'
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-
 
 # Application definition
 
@@ -45,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'django_extensions',
     'main.apps.MainConfig',
 ]
 
