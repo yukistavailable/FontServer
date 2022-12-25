@@ -23,4 +23,5 @@ services:
     volumes:
       - "./nginx:/etc/nginx/conf.d"
       - "./prodo/static:/var/www/font/static/"
-      - "/var/www/font/wellknown:/var/www/font/wellknown"
+      - "/var/www/font/wellknown/:/var/www/font/wellknown/"
+      - "/etc/letsencrypt/live/piyopiyo.de/:/etc/letsencrypt/live/piyopiyo.de/"
