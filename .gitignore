@@ -7,3 +7,5 @@ __pycache__/
 server.crt
 server.key
 server.csr
+server-cert.pem
+server-key.pem
