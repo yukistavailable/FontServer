@@ -3,7 +3,7 @@ version: '3'
 services:
   app:
     build: .
-    entrypoint: sh -c "python3 manage.py makemigrations; python3 manage.py migrate; python3 manage.py runserver 0.0.0.0:80"
+    entrypoint: sh -c "python3 manage.py makemigrations; python3 manage.py migrate; python3 manage.py runserver_plus --cert-file ./server-cert.pem --key-file ./server-key.pem"
     volumes:
       - .:/code
     ports:
