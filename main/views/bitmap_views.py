@@ -56,4 +56,5 @@ class PostGetBitMapView(views.APIView):
                     created_bit_map.id,
                     status=status.HTTP_201_CREATED)
         except BaseException as e:
+            print(e)
             return Response(status=status.HTTP_400_BAD_REQUEST)
