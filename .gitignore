@@ -5,3 +5,4 @@ main/bitmaps
 *.pyc
 __pycache__/
 */__pycache__/
+/prodo/
