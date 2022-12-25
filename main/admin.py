@@ -12,11 +12,11 @@ BITMAP_PATH = os.path.join(BASE_DIR, BITMAP_DIR)
 
 
 class BitMapAdmin(admin.ModelAdmin):
-    list_display = ('id', 'kanji', 'created_at', 'format_thumbnail',)
+    list_display = ('id', 'kanji', 'created_at', 'format_thumbnail', 'memo',)
     list_display_links = ('id',)
     search_fields = ('kanji',)
     list_filter = ('kanji',)
-    fields = ('id', 'kanji', 'value', 'created_at', 'format_image',)
+    fields = ('id', 'kanji', 'value', 'created_at', 'format_image', 'memo',)
     readonly_fields = ('id', 'created_at', 'format_image', 'format_thumbnail',)
 
     def format_image(self, obj):

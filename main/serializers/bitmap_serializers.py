@@ -8,4 +8,5 @@ class CreateRetrieveBitMapSerializer(serializers.ModelSerializer):
         fields = [
             'value',
             'kanji',
+            'memo',
         ]
